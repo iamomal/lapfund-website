@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diaspora Members Online Registration</title>
+    <link rel="stylesheet" href="diasporastyles.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li>Company Profile
+                    <ul class="submenu">
+                        <li><a href="bod.html">Board of Directors</a></li>
+                        <li><a href="secretariat.html">The Secretariat</a></li>
+                        <li><a href="standards.html">Our Standards & Policies</a></li>
+                        <li><a href="servicecharter.html">Service Charter</a></li>
+                    </ul>
+                </li>
+                <li>Products & Benefits
+                    <ul class="submenu">
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="benefits.html">Benefits</a></li>
+                    </ul>
+                </li>
+                <li>Member Services
+                    <ul class="submenu">
+                        <li><a href="https://mss.lapfund.or.ke/Login?ReturnUrl=%2F">Members Portal</a></li>
+                        <li><a href="#">Online Services</a>
+                            <ul class="sub-submenu">
+                                <li><a href="diaspora.html">Diaspora Members</a></li>
+                                <li><a href="kenyan.html">Kenyan Members</a></li>
+                                <li><a href="https://www.lapfund.or.ke/pay/ipay.php">Diaspora Payment Option</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="inquiry.html">Inquiry/Service Request</a></li>
+                        <li><a href="faq.html">Frequently Asked Questions</a></li>
+                    </ul>
+                </li>
+                <li><a href="tenders.html">Tenders</a></li>
+                <li>Information Center
+                    <ul class="submenu">
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="vacancies.html">Career & Vacancies</a></li>
+                        <li><a href="#">Lapfund Investments</a>
+                            <ul class="sub-submenu">
+                                <li><a href="https://www.lapfund.or.ke/makasembo/">Makasembo in Kisumu</a></li>
+                                <li><a href="#">Bellevue by Lapfund</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="offices.html">Offices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form class="registration-form">
+            <!-- Section 1: Applicant Details -->
+            <section class="form-section">
+                <h2>Applicant Details</h2>
+                <div class="form-group">
+                    <label for="title">Select Title*</label>
+                    <select id="title" name="title" required>
+                        <option value="">Select</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="text" id="other-title" name="other-title" placeholder="If you selected Other, please specify">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname*</label>
+                    <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+                </div>
+                <div class="form-group">
+                    <label for="first-name">First Name*</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender*</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="marital-status">Marital Status</label>
+                    <select id="marital-status" name="marital-status">
+                        <option value="">Select</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality*</label>
+                    <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth*</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="id-passport">ID/Passport Number*</label>
+                    <input type="text" id="id-passport" name="id-passport" placeholder="Enter ID/Passport number" required>
+                </div>
+                <div class="form-group">
+                    <label for="issue-date">Issue Date (if passport)</label>
+                    <input type="date" id="issue-date" name="issue-date">
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date (if passport)</label>
+                    <input type="date" id="expiry-date" name="expiry-date">
+                </div>
+                <div class="form-group">
+                    <label for="pin">PIN Number</label>
+                    <input type="text" id="pin" name="pin" placeholder="Enter your PIN number">
+                </div>
+                <div class="form-group">
+                    <label for="country-residence">Country of Residence*</label>
+                    <input type="text" id="country-residence" name="country-residence" placeholder="Enter your country of residence" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Current Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your current address">
+                </div>
+                <div class="form-group">
+                    <label for="city">City*</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State*</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code*</label>
+                    <input type="text" id="zip" name="zip" placeholder="Enter your zip code" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Telephone Number*</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Enter your telephone number" required>
+                </div>
+            </section>
+    
+            <!-- Section 2: Payment Instructions -->
+            <section class="form-section">
+                <h2>Payment Instructions</h2>
+                <div class="form-group">
+                    <label for="commitment">I hereby commit to credit USD ($) to LAPFUND Bank Account</label>
+                    <input type="text" id="commitment" name="commitment" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label for="commencement-date">Date of Commencement of Contributions</label>
+                    <input type="date" id="commencement-date" name="commencement-date">
+                </div>
+                <div class="form-group">
+                    <label for="credit-date">Specify Date of Credit</label>
+                    <select id="credit-date" name="credit-date">
+                        <option value="">Select</option>
+                        <option value="1st">1st of every month</option>
+                        <option value="5th">5th</option>
+                        <option value="10th">10th</option>
+                        <option value="15th">15th</option>
+                        <option value="20th">20th</option>
+                        <option value="25th">25th</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Account Name</th>
+                                <th>Account Number</th>
+                                <th>Bank</th>
+                                <th>Branch</th>
+                                <th>Swift Code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Local Authorities Provident Fund</td>
+                                <td>1114898767</td>
+                                <td>KCB</td>
+                                <td>Gateway House</td>
+                                <td>KCBKENX</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <p>Forward payment information to <a href="mailto:diaspora@lapfund.or.ke">diaspora@lapfund.or.ke</a></p>
+                </div>
+            </section>
+    
+            <!-- Section 3: Nominated Beneficiaries -->
+            <section class="form-section">
+                <h2>Nominated Beneficiaries</h2>
+                <div class="form-group">
+                    <label for="beneficiary1-name">Beneficiary 1 Full Name</label>
+                    <input type="text" id="beneficiary1-name" name="beneficiary1-name" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary1-id">Beneficiary 1 ID/Passport Number</label>
+                    <input type="text" id="beneficiary1-id" name="beneficiary1-id" placeholder="Enter ID/Passport number">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary1-relationship">Relationship with Beneficiary 1</label>
+                    <input type="text" id="beneficiary1-relationship" name="beneficiary1-relationship" placeholder="Enter relationship">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary1-email">Beneficiary 1 Email Address</label>
+                    <input type="email" id="beneficiary1-email" name="beneficiary1-email" placeholder="Enter email address">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary1-proportion">Proportion of Benefit for Beneficiary 1</label>
+                    <input type="text" id="beneficiary1-proportion" name="beneficiary1-proportion" placeholder="Enter proportion">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary2-name">Beneficiary 2 Full Name</label>
+                    <input type="text" id="beneficiary2-name" name="beneficiary2-name" placeholder="Enter full name">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary2-id">Beneficiary 2 ID/Passport Number</label>
+                    <input type="text" id="beneficiary2-id" name="beneficiary2-id" placeholder="Enter ID/Passport number">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary2-relationship">Relationship with Beneficiary 2</label>
+                    <input type="text" id="beneficiary2-relationship" name="beneficiary2-relationship" placeholder="Enter relationship">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary2-email">Beneficiary 2 Email Address</label>
+                    <input type="email" id="beneficiary2-email" name="beneficiary2-email" placeholder="Enter email address">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary2-proportion">Proportion of Benefit for Beneficiary 2</label>
+                    <input type="text" id="beneficiary2-proportion" name="beneficiary2-proportion" placeholder="Enter proportion">
+                </div>
+            </section>
+    
+            <!-- Section 4: Agent Selection -->
+            <section class="form-section">
+                <h2>If you were recruited by an agent, select their name</h2>
+                <div class="form-group">
+                    <select id="agent" name="agent">
+                        <option value="">Select</option>
+                        <option value="Laban Opande">Laban Opande</option>
+                        <option value="Ali Badawy">Ali Badawy</option>
+                        <option value="Benson Kasue">Benson Kasue</option>
+                        <option value="Albert Nyamari">Albert Nyamari</option>
+                        <option value="Alex Karundu">Alex Karundu</option>
+                        <option value="Marjorie Kimanga">Marjorie Kimanga</option>
+                    </select>
+                </div>
+            </section>
+    
+            <!-- Section 5: Form of Communication -->
+            <section class="form-section">
+                <h2>Form of Communication</h2>
+                <div class="form-group">
+                    <label for="communication">Please select how you would like to receive communication such as statements, updates etc.</label>
+                    <select id="communication" name="communication">
+                        <option value="">Select</option>
+                        <option value="Email">Email</option>
+                        <option value="Postage">Postage (attracts a fee)</option>
+                    </select>
+                </div>
+            </section>
+    
+            <!-- Section 6: Declaration -->
+            <section class="form-section">
+                <h2>Declaration</h2>
+                <div class="form-group">
+                    <p>I, the undersigned, confirm that I have read and understood this declaration and its implications.</p>
+                </div>
+                <div class="form-group">
+                    <label for="applicant-name">Applicant Name</label>
+                    <input type="text" id="applicant-name" name="applicant-name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="applicant-date">Applicant Date</label>
+                    <input type="date" id="applicant-date" name="applicant-date">
+                </div>
+                <div class="form-group">
+                    <label for="beneficiary-ids">Upload Beneficiaries IDs/Passports</label>
+                    <input type="file" id="beneficiary-ids" name="beneficiary-ids">
+                </div>
+                <div class="form-group">
+                    <label for="applicant-id">Upload Applicant ID/Passport</label>
+                    <input type="file" id="applicant-id" name="applicant-id">
+                </div>
+                <div class="form-group radio-group">
+                    <input type="checkbox" id="send-copy" name="send-copy" value="yes">
+                    <label for="send-copy">Send me a copy</label>
+                </div>
+            </section>
+    
+            <!-- Submit Button -->
+            <div class="form-submit">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="logofooter-1">
+                    <img class="logo2" src="logo.png" alt="logo2">
+                </div>
+                <div class="footer-heading footer-1">
+                    <h2>Quick Links</h2>
+                    <a href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=ad98fdaf-a41d-fb19-c7ed-8fc25478ad3b&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&nonce=638781587403704853.bff68835-5b5a-42d5-bcc7-455c0de2c32a&state=DcuxFYAwCABRos9xMBhAWCchprV0fSn-dVcAYE9bKpQBu9nNL3UTYiNx5XOsdbuzog7tKG0qjghDUQ2aTwtuveR71Pfr9Qc">Staff Mail</a>
+                    <a href="inquiry.html">Service Request</a>
+                    <a href="https://mss.lapfund.or.ke/Login?ReturnUrl=%2F">Members Portal</a>
+                </div>
+                <div class="footer-heading footer-2">
+                    <h2>Contact Us</h2>
+                    <p>Email: <a href="mailto:info@lapfund.or.ke">info@lapfund.or.ke</a></p>
+                    <p>Number: <a href="tel:+254709805000">+254 709 805 000 / 100</a></p>
+                    <p>Location: 316 Upper Hill Chambers, 10th Floor.</p>
+                    <a href="https://www.facebook.com/LAPFUNDSecuredRetirement/">Facebook</a>
+                    <a href="https://x.com/LAPFUND_">Twitter</a>
+                </div>
+                <div class="footer-heading footer-3">
+                    <h2>Extra Links</h2>
+                    <a href="#">Diaspora Product</a>
+                    <a href="amal.html">Lapfund AMAL</a>
+                    <a href="#">Whistle Blower Portal</a>
+                    <p>
+                        Copyright @LAPFUND 2022. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

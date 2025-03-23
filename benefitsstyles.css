@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Header Section */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(120deg, orangered, rgb(13, 155, 13));
+}
+
+main {
+    flex: 1;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.logo {
+    cursor: pointer;
+    width: 120px;
+    margin-right: auto;
+    margin-left: 80px;
+}
+
+.nav_links {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: white;
+}
+
+.nav_links a {
+    pointer-events: auto; /* Ensure links are clickable */
+    position: relative; /* Reset positioning */
+    z-index: 1; /* Ensure links are above other elements */
+}
+
+.nav_links li:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    transition: all 0.3s ease 0s;
+    color: orangered;
+    background-color: white;
+}
+
+/* Navbar Styles */
+header ul .submenu {
+    position: absolute;
+    width: 200px;
+    background-color: #24252a;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+    margin-top: -50px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.3s;
+    background-color: white;
+}
+
+header ul li:hover .submenu {
+    z-index: 99;
+    opacity: 1;
+    margin-top: 0;
+    background-color: white;
+}
+
+header ul .submenu li {
+    margin: 0;
+    width: 100%;
+}
+
+header ul.submenu li a {
+    padding: 15px 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+header ul .sub-submenu {
+    position: absolute;
+    width: 200px;
+    background-color: #e9e9ec;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.3s;
+    right: 100%; /* Position to the right of the parent menu */
+    top: 0; /* Align with the top of the parent menu */
+    margin-left: 10px; /* Add spacing to avoid overlap */
+}
+
+header ul .submenu li a:hover + .sub-submenu,
+header ul .sub-submenu:hover {
+    opacity: 1;
+    z-index: 999;
+}
+
+/* Benefits Section */
+.benefits {
+    position: relative;
+    width: 100%;
+    padding: 4rem 0; /* Add padding for spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2rem; /* Spacing below the title */
+}
+
+.benefits h1 {
+    font-size: 2.5rem;
+    color: orangered;
+    margin-bottom: 2rem; /* Add spacing below the title */
+}
+
+.benefitscontent {
+    width: 100%;
+    max-width: 1200px; /* Limit content width for better readability */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Spacing between pairs */
+}
+
+.pairscontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Spacing between pairs */
+}
+
+.pair {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Spacing between boxes in a pair */
+    width: 100%;
+}
+
+/* Box Styling */
+.box {
+    width: 45%; /* Adjust width for pairs */
+    max-width: 500px; /* Limit maximum width */
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: left; /* Align text to the left */
+    overflow: hidden; /* Hide overflowing content */
+    height: 500px; /* Fixed height for all boxes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between title and hidden content */
+}
+
+.box h2 {
+    font-size: 1.8rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.box img {
+    width: 100%; /* Ensure images fit within the box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-bottom: 1rem;
+}
+
+.box p,
+.box h3,
+.box ul,
+.box ol,
+.box button {
+    opacity: 0; /* Hide all content except h2 and img */
+    max-height: 0; /* Hide all content except h2 and img */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 0; /* Remove default margins */
+}
+
+.box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    height: auto; /* Allow the box to expand on hover */
+}
+
+.box:hover p,
+.box:hover h3,
+.box:hover ul,
+.box:hover ol,
+.box:hover button {
+    opacity: 1; /* Show content on hover */
+    max-height: 500px; /* Adjust based on content length */
+    margin-bottom: 1rem; /* Add spacing between elements */
+}
+
+/* Prevent the other box in the pair from elongating */
+.pair .box {
+    flex: 1; /* Ensure both boxes in the pair take up equal space */
+    transition: all 0.3s ease;
+}
+
+.pair .box:hover {
+    flex: 1.5; /* Expand the hovered box slightly */
+}
+
+/* Button Styling */
+.benefitsapplication, .funeralapplication {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem; /* Add spacing above the button */
+}
+
+.benefitsapplication:hover, .funeralapplication:hover {
+    background-color: #ff4500; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Footer Section */
+.footer-container {
+    background-color: #24252a;
+    padding: 2rem 0;
+    width: 100%; /* Ensure the container spans the full width */
+}
+
+.footer {
+    background-color: #24252a;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%; /* Ensure the footer spans the full width */
+    max-width: 1200px; /* Optional: Limit content width for better readability */
+    gap: 1rem; /* Add gap between columns for better spacing */
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem; /* Reduce margin to save space */
+    flex: 1; /* Allow columns to grow equally */
+    min-width: 150px; /* Set a minimum width for each column */
+}
+
+.footer-heading h2 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-heading a,
+.footer-heading p {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-heading a:hover {
+    color: orangered;
+    transition: all ease 0.3s;
+}
+
+.footer-heading p a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-heading p a:hover {
+    color: orangered;
+    transition: all ease 0.3s;
+}
+
+.footer-heading p {
+    margin: 0;
+}
+
+.logofooter-1 {
+    flex: 1;
+    min-width: 150px; /* Reduce min-width to save space */
+    margin-right: 1rem; /* Reduce margin to save space */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.logo2 {
+    width: 100%;
+    max-width: 150px; /* Reduce logo size to save space */
+    margin-left: 0; /* Remove left margin to save space */
+}
