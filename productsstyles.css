@@ -132,7 +132,7 @@ header ul .sub-submenu:hover {
     align-items: center;
 }
 
-.products h1{
+.products h1 {
     margin-bottom: 2rem;
     color: orangered;
 }
@@ -177,6 +177,35 @@ header ul .sub-submenu:hover {
 }
 
 .box p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.amalbox {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%; /* Make it full width initially */
+    max-width: 800px; /* Set a wider max-width */
+    margin: 0 auto; /* Center the box horizontally */
+    transition: all 0.3s ease;
+    text-align: center; /* Center the text inside */
+}
+
+.amalbox:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+.amalbox h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #28a745;
+}
+
+.amalbox p {
     font-size: 1rem;
     color: #666;
     line-height: 1.5;
