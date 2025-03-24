@@ -221,7 +221,7 @@ header ul .sub-submenu:hover {
     width: 45%; /* Adjust width for pairs */
     max-width: 400px; /* Limit maximum width */
     padding: 1.5rem;
-    background-color: #ffffff;
+    background-color: #c0bebe;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;

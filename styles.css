@@ -139,7 +139,7 @@ header ul .sub-submenu:hover {
 
 .about-column {
     flex: 1;
-    background-color: #ffffff;
+    background-color: #c0bebe;
     border-radius: 15px; /* Rounded corners */
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

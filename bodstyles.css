@@ -164,7 +164,7 @@ header ul .sub-submenu:hover {
     width: 80%;
     max-width: 800px;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: #c0bebe;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -202,7 +202,7 @@ header ul .sub-submenu:hover {
     flex: 1 1 calc(33.333% - 40px); /* Three boxes per row with gap */
     max-width: calc(33.333% - 40px); /* Ensure equal width */
     padding: 1.5rem;
-    background-color: #ffffff;
+    background-color: #c0bebe;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -232,7 +232,7 @@ header ul .sub-submenu:hover {
     width: 80%;
     max-width: 800px;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: #c0bebe;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
