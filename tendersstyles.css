@@ -134,7 +134,7 @@ header ul .sub-submenu:hover {
 /* Title Styling */
 .tender-container h1 {
     font-size: 1.5rem;
-    color: orangered; /* Green color for the title */
+    color: rgb(3, 3, 3); /* Green color for the title */
     margin-bottom: 1rem;
 }
 

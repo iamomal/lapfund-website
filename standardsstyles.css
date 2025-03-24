@@ -176,11 +176,11 @@ header ul .sub-submenu:hover {
 .standardssection h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: orangered;
+    color: rgb(12, 12, 12);
 }
 
 .standardssection h2{
-    color: orangered;
+    color: rgb(17, 17, 16);
 }
 
 .standardscontainer {
