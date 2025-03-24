@@ -134,7 +134,7 @@ header ul .sub-submenu:hover {
 /* Main Title Styling */
 .vacancies-container h1 {
     font-size: 2.5rem;
-    color: orangered; /* Green color for the main title */
+    color: rgb(12, 12, 12); /* Green color for the main title */
     margin-bottom: 1rem;
 }
 
