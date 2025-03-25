@@ -313,7 +313,7 @@ body {
 .hamburger {
     width: 30px;
     height: 3px;
-    background: #000;
+    background: #fcfbfb;
     transition: all 0.3s linear;
 }
 
@@ -339,7 +339,7 @@ body {
         width: 80%;
         max-width: 400px;
         height: 100vh;
-        background: white;
+        background: rgb(8, 8, 8);
         padding: 80px 20px 20px;
         transition: right 0.3s ease-in-out;
         overflow-y: auto;
@@ -374,7 +374,7 @@ body {
         transition: max-height 0.3s ease;
         margin-top: 0;
         box-shadow: none;
-        background: #f5f5f5;
+        background: #0a0a0a;
     }
     
     header ul li.active .submenu {
@@ -390,7 +390,7 @@ body {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        background: #e9e9ec;
+        background: #080808;
     }
     
     header ul .submenu li.active .sub-submenu {

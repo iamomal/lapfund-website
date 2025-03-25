@@ -326,7 +326,7 @@ header ul .sub-submenu:hover {
 .hamburger {
     width: 30px;
     height: 3px;
-    background: #000;
+    background: #fdfcfc;
     transition: all 0.3s linear;
 }
 
@@ -352,7 +352,7 @@ header ul .sub-submenu:hover {
         width: 80%;
         max-width: 400px;
         height: 100vh;
-        background: white;
+        background: rgb(7, 7, 7);
         padding: 80px 20px 20px;
         transition: right 0.3s ease-in-out;
         overflow-y: auto;
@@ -387,7 +387,7 @@ header ul .sub-submenu:hover {
         transition: max-height 0.3s ease;
         margin-top: 0;
         box-shadow: none;
-        background: #f5f5f5;
+        background: #070707;
     }
     
     header ul li.active .submenu {
@@ -403,7 +403,7 @@ header ul .sub-submenu:hover {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        background: #e9e9ec;
+        background: #070707;
     }
     
     header ul .submenu li.active .sub-submenu {
