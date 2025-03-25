@@ -16,27 +16,6 @@ body {
     background: linear-gradient(120deg, orangered, rgb(13, 155, 13));
 }
 
-/* Overall Page Background */
-body {
-    background-color: #706f6f; /* Light gray background */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Form Container */
-.registration-form {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #ffffff; /* White background for the form */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd; /* Optional: Add a subtle border */
-}
-
 main {
     flex: 1;
 }
@@ -166,14 +145,14 @@ header ul .sub-submenu:hover {
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
-    background-color: #c0bebe;
+    background-color: #e0e0e0 ;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h2 {
     font-size: 2rem;
-    color: #28a745;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
@@ -216,7 +195,7 @@ header ul .sub-submenu:hover {
 }
 
 .office {
-    background-color: #c0bebe;
+    background-color: #e0e0e0 ;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;

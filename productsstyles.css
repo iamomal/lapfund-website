@@ -156,8 +156,7 @@ header ul .sub-submenu:hover {
 }
 
 .box {
-    background-color: #c0bebe;
-    border: 1px solid #e0e0e0;
+    background-color: #e0e0e0 ;
     border-radius: 8px;
     padding: 1.5rem;
     flex: 1;
@@ -183,8 +182,7 @@ header ul .sub-submenu:hover {
 }
 
 .amalbox {
-    background-color: #c0bebe;
-    border: 1px solid #e0e0e0;
+    background-color: #e0e0e0 ;
     border-radius: 8px;
     padding: 1.5rem;
     width: 100%; /* Make it full width initially */

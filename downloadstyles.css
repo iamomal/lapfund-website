@@ -132,7 +132,7 @@ header ul .sub-submenu:hover {
 /* Download Column */
 .download-column {
     flex: 1;
-    background-color: #c0bebe;
+    background-color: #e0e0e0 ;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 1.5rem;
