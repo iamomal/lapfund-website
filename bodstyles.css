@@ -32,7 +32,7 @@ main {
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     margin-top: 10px;
 }
@@ -42,7 +42,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 .logo {
@@ -60,7 +60,6 @@ header {
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
-    background-color: white;
 }
 
 .nav_links li:hover {
@@ -75,7 +74,6 @@ header {
 .nav_links li a:hover {
     transition: all 0.3s ease 0s;
     color: orangered;
-    background-color: white;
 }
 
 /* Navbar Styles */
@@ -88,14 +86,14 @@ header ul .submenu {
     opacity: 0;
     z-index: -999;
     transition: all ease 0.3s;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 header ul li:hover .submenu {
     z-index: 99;
     opacity: 1;
     margin-top: 0;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 header ul .submenu li {
@@ -112,7 +110,7 @@ header ul.submenu li a {
 header ul .sub-submenu {
     position: absolute;
     width: 200px;
-    background-color: #e9e9ec;
+    background-color: #000000;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
     opacity: 0;
     z-index: -999;
@@ -164,7 +162,7 @@ header ul .sub-submenu:hover {
     width: 80%;
     max-width: 800px;
     padding: 2rem;
-    background-color: #c0bebe;
+    background-color: #fcfcfc;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -202,7 +200,7 @@ header ul .sub-submenu:hover {
     flex: 1 1 calc(33.333% - 40px); /* Three boxes per row with gap */
     max-width: calc(33.333% - 40px); /* Ensure equal width */
     padding: 1.5rem;
-    background-color: #c0bebe;
+    background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -232,7 +230,7 @@ header ul .sub-submenu:hover {
     width: 80%;
     max-width: 800px;
     padding: 2rem;
-    background-color: #e0e0e0 ;
+    background-color: #ffffff ;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;

@@ -23,7 +23,7 @@ main {
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     margin-top: 10px;
 }
@@ -33,7 +33,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 .logo {
@@ -51,7 +51,7 @@ header {
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
-    background-color: white;
+    background-color: rgb(8, 8, 8);
 }
 
 .nav_links a {
@@ -72,7 +72,6 @@ header {
 .nav_links li a:hover {
     transition: all 0.3s ease 0s;
     color: orangered;
-    background-color: white;
 }
 
 /* Navbar Styles */
@@ -85,14 +84,12 @@ header ul .submenu {
     opacity: 0;
     z-index: -999;
     transition: all ease 0.3s;
-    background-color: white;
 }
 
 header ul li:hover .submenu {
     z-index: 99;
     opacity: 1;
     margin-top: 0;
-    background-color: white;
 }
 
 header ul .submenu li {
@@ -109,7 +106,7 @@ header ul.submenu li a {
 header ul .sub-submenu {
     position: absolute;
     width: 200px;
-    background-color: #e9e9ec;
+    background-color: #000000;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
     opacity: 0;
     z-index: -999;
@@ -173,7 +170,7 @@ header ul .sub-submenu:hover {
     width: 45%; /* Adjust width for pairs */
     max-width: 500px; /* Limit maximum width */
     padding: 1.5rem;
-    background-color: #e0e0e0 ;
+    background-color: #ffffff ;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
