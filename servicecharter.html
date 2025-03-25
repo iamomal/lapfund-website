@@ -10,6 +10,11 @@
 <body>
     <header>
         <img class="logo" src="logo.png" alt="logo">
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
         <nav>
             <ul class="nav_links">
                 <li><a href="index.html">Home</a></li>
@@ -134,5 +139,75 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('.nav_links > li');
+            
+            // Add has-submenu class to items with submenus
+            document.querySelectorAll('.nav_links > li').forEach(li => {
+                if (li.querySelector('.submenu')) {
+                    li.classList.add('has-submenu');
+                }
+            });
+        
+            // Toggle mobile menu
+            mobileMenuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+            
+            // Handle submenu clicks on mobile
+            navLinks.forEach(link => {
+                const submenu = link.querySelector('.submenu');
+                const linkAnchor = link.querySelector('a');
+                
+                if (submenu) {
+                    // Add click handler for the parent item
+                    link.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            // If clicking on the actual link (not the text), follow it
+                            if (e.target.tagName === 'A') {
+                                return; // Let the default link behavior happen
+                            }
+                            
+                            // Otherwise, toggle the submenu
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                            
+                            // Close other open submenus
+                            navLinks.forEach(otherLink => {
+                                if (otherLink !== this && otherLink.classList.contains('active')) {
+                                    otherLink.classList.remove('active');
+                                }
+                            });
+                        }
+                    });
+                    
+                    // Make sure anchor links work
+                    if (linkAnchor) {
+                        linkAnchor.addEventListener('click', function(e) {
+                            if (window.innerWidth <= 768 && !link.classList.contains('active')) {
+                                // If submenu isn't open, follow the link
+                                return;
+                            }
+                            e.stopPropagation();
+                        });
+                    }
+                }
+            });
+            
+            // Close menu when clicking on a simple link
+            document.querySelectorAll('.nav_links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768 && !link.parentElement.querySelector('.submenu')) {
+                        nav.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

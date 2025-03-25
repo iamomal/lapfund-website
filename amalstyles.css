@@ -16,27 +16,6 @@ body {
     background: linear-gradient(120deg, orangered, rgb(13, 155, 13));
 }
 
-/* Overall Page Background */
-body {
-    background-color: #706f6f; /* Light gray background */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Form Container */
-.registration-form {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #ffffff; /* White background for the form */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd; /* Optional: Add a subtle border */
-}
-
 main {
     flex: 1;
 }
@@ -55,6 +34,7 @@ header {
     align-items: center;
     padding: 10px;
     background-color: white;
+    position: relative;
 }
 
 .logo {
@@ -129,9 +109,9 @@ header ul .sub-submenu {
     opacity: 0;
     z-index: -999;
     transition: all ease 0.3s;
-    right: 100%; /* Position to the right of the parent menu */
-    top: 0; /* Align with the top of the parent menu */
-    margin-left: 10px; /* Add spacing to avoid overlap */
+    right: 100%;
+    top: 0;
+    margin-left: 10px;
 }
 
 header ul .submenu li a:hover + .sub-submenu,
@@ -140,11 +120,32 @@ header ul .sub-submenu:hover {
     z-index: 999;
 }
 
-body{
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    transition: all 0.3s linear;
+}
+
+/* Content Styles */
+body {
     background-color: #e9e7e7;
 }
 
-/* Centered Content Styles */
 .content-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -163,7 +164,7 @@ body{
     line-height: 1.6;
     color: #333;
     padding: 2rem;
-    background-color: #e0e0e0 ;
+    background-color: #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
@@ -201,6 +202,10 @@ body{
 
 .download-section {
     margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .download-section h3 {
@@ -220,14 +225,14 @@ body{
 }
 
 .download-section .download-button:hover {
-    background-color: orangered;
+    background-color: #e65c00;
 }
 
 /* Footer Section */
 .footer-container {
     background-color: #24252a;
     padding: 2rem 0;
-    width: 100%; /* Ensure the container spans the full width */
+    width: 100%;
 }
 
 .footer {
@@ -239,17 +244,17 @@ body{
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 1rem;
-    width: 100%; /* Ensure the footer spans the full width */
-    max-width: 1200px; /* Optional: Limit content width for better readability */
-    gap: 1rem; /* Add gap between columns for better spacing */
+    width: 100%;
+    max-width: 1200px;
+    gap: 1rem;
 }
 
 .footer-heading {
     display: flex;
     flex-direction: column;
-    margin-right: 1rem; /* Reduce margin to save space */
-    flex: 1; /* Allow columns to grow equally */
-    min-width: 150px; /* Set a minimum width for each column */
+    margin-right: 1rem;
+    flex: 1;
+    min-width: 150px;
 }
 
 .footer-heading h2 {
@@ -287,8 +292,8 @@ body{
 
 .logofooter-1 {
     flex: 1;
-    min-width: 150px; /* Reduce min-width to save space */
-    margin-right: 1rem; /* Reduce margin to save space */
+    min-width: 150px;
+    margin-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -297,6 +302,188 @@ body{
 
 .logo2 {
     width: 100%;
-    max-width: 150px; /* Reduce logo size to save space */
-    margin-left: 0; /* Remove left margin to save space */
+    max-width: 150px;
+    margin-left: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        margin-left: 0;
+        width: 100px;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: white;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    .nav_links {
+        flex-direction: column;
+    }
+    
+    .nav_links li {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    .nav_links li a {
+        display: block;
+        padding: 10px;
+    }
+    
+    /* Submenu styles for mobile */
+    header ul .submenu {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin-top: 0;
+        box-shadow: none;
+        background: #f5f5f5;
+    }
+    
+    header ul li.active .submenu {
+        max-height: 1000px;
+    }
+    
+    header ul .sub-submenu {
+        position: static;
+        width: 100%;
+        right: auto;
+        top: auto;
+        margin-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: #e9e9ec;
+    }
+    
+    header ul .submenu li.active .sub-submenu {
+        max-height: 1000px;
+    }
+    
+    /* Content adjustments */
+    .content-container {
+        padding: 1rem;
+    }
+    
+    .centered-title {
+        font-size: 1.8rem;
+    }
+    
+    .centered-paragraph {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .download-column h2 {
+        font-size: 1.5rem;
+    }
+    
+    .download-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-heading {
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    
+    .logofooter-1 {
+        justify-content: center;
+        margin-right: 0;
+    }
+    
+    /* Mobile menu indicators */
+    .nav_links > li.has-submenu {
+        position: relative;
+    }
+    
+    .nav_links > li.has-submenu > a {
+        display: inline-block;
+        padding-right: 30px;
+    }
+    
+    .nav_links > li.has-submenu::after {
+        content: '+';
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 20px;
+        transition: transform 0.3s;
+    }
+    
+    .nav_links > li.has-submenu.active::after {
+        content: '-';
+    }
+    
+    .submenu li a {
+        padding-left: 30px !important;
+    }
+    
+    .sub-submenu li a {
+        padding-left: 50px !important;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    nav {
+        display: block !important;
+    }
+}
+
+/* Additional responsiveness for very small screens */
+@media screen and (max-width: 480px) {
+    .centered-title {
+        font-size: 1.5rem;
+    }
+    
+    .download-column h2 {
+        font-size: 1.3rem;
+    }
+    
+    .download-section h3 {
+        font-size: 1rem;
+    }
+    
+    .download-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 }

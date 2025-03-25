@@ -34,6 +34,7 @@ header{
     align-items: center;
     padding: 10px;
     background-color: white;
+    position: relative;
 }
 
 .logo{
@@ -117,6 +118,27 @@ header ul .submenu li a:hover + .sub-submenu,
 header ul .sub-submenu:hover {
     opacity: 1;
     z-index: 999;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    transition: all 0.3s linear;
 }
 
 /* Whistleblower Form Styles */
@@ -210,7 +232,7 @@ header ul .sub-submenu:hover {
 
 .form-submit button {
     padding: 0.75rem 2rem;
-    background-color: #007bff;
+    background-color: orangered;
     color: white;
     border: none;
     border-radius: 5px;
@@ -267,24 +289,11 @@ header ul .sub-submenu:hover {
     font-weight: normal;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .registration-form {
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-    
-    .form-section h2 {
-        font-size: 1rem;
-        padding: 0.5rem;
-    }
-}
-
 /* Footer Section */
 .footer-container {
     background-color: #24252a;
     padding: 2rem 0;
-    width: 100%; /* Ensure the container spans the full width */
+    width: 100%;
 }
 
 .footer {
@@ -296,17 +305,17 @@ header ul .sub-submenu:hover {
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 1rem;
-    width: 100%; /* Ensure the footer spans the full width */
-    max-width: 1200px; /* Optional: Limit content width for better readability */
-    gap: 1rem; /* Add gap between columns for better spacing */
+    width: 100%;
+    max-width: 1200px;
+    gap: 1rem;
 }
 
 .footer-heading {
     display: flex;
     flex-direction: column;
-    margin-right: 1rem; /* Reduce margin to save space */
-    flex: 1; /* Allow columns to grow equally */
-    min-width: 150px; /* Set a minimum width for each column */
+    margin-right: 1rem;
+    flex: 1;
+    min-width: 150px;
 }
 
 .footer-heading h2 {
@@ -344,8 +353,8 @@ header ul .sub-submenu:hover {
 
 .logofooter-1 {
     flex: 1;
-    min-width: 150px; /* Reduce min-width to save space */
-    margin-right: 1rem; /* Reduce margin to save space */
+    min-width: 150px;
+    margin-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -354,6 +363,197 @@ header ul .sub-submenu:hover {
 
 .logo2 {
     width: 100%;
-    max-width: 150px; /* Reduce logo size to save space */
-    margin-left: 0; /* Remove left margin to save space */
+    max-width: 150px;
+    margin-left: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        margin-left: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: white;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    .nav_links {
+        flex-direction: column;
+    }
+    
+    .nav_links li {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    .nav_links li a {
+        display: block;
+        padding: 10px;
+    }
+    
+    /* Submenu styles for mobile */
+    header ul .submenu {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin-top: 0;
+        box-shadow: none;
+        background: #f5f5f5;
+    }
+    
+    header ul li.active .submenu {
+        max-height: 1000px;
+    }
+    
+    header ul .sub-submenu {
+        position: static;
+        width: 100%;
+        right: auto;
+        top: auto;
+        margin-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: #e9e9ec;
+    }
+    
+    header ul .submenu li.active .sub-submenu {
+        max-height: 1000px;
+    }
+    
+    /* Form adjustments */
+    .registration-form {
+        padding: 1rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .registration-form h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .form-section h2 {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-heading {
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    
+    .logofooter-1 {
+        justify-content: center;
+        margin-right: 0;
+    }
+    
+    /* Mobile menu indicators */
+    .nav_links > li.has-submenu {
+        position: relative;
+    }
+    
+    .nav_links > li.has-submenu > a {
+        display: inline-block;
+        padding-right: 30px;
+    }
+    
+    .nav_links > li.has-submenu::after {
+        content: '+';
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 20px;
+        transition: transform 0.3s;
+    }
+    
+    .nav_links > li.has-submenu.active::after {
+        content: '-';
+    }
+    
+    .submenu li a {
+        padding-left: 30px !important;
+    }
+    
+    .sub-submenu li a {
+        padding-left: 50px !important;
+    }
+    
+    /* Form submit button */
+    .form-submit button {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    nav {
+        display: block !important;
+    }
+}
+
+/* Additional form responsiveness for very small screens */
+@media screen and (max-width: 480px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.5rem;
+    }
+    
+    .form-section h2 {
+        font-size: 0.9rem;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .registration-form h1 {
+        font-size: 1.3rem;
+    }
 }

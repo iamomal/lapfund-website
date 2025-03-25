@@ -287,3 +287,188 @@ header ul .sub-submenu:hover {
     max-width: 150px; /* Reduce logo size to save space */
     margin-left: 0; /* Remove left margin to save space */
 }
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    transition: all 0.3s linear;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+    .triple {
+        flex-wrap: wrap;
+    }
+    
+    .box {
+        max-width: calc(50% - 1rem);
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        margin-left: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: white;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    .nav_links {
+        flex-direction: column;
+    }
+    
+    .nav_links li {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    .nav_links li a {
+        display: block;
+        padding: 10px;
+    }
+    
+    /* Submenu styles for mobile */
+    header ul .submenu {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin-top: 0;
+        box-shadow: none;
+        background: #f5f5f5;
+    }
+    
+    header ul li.active .submenu {
+        max-height: 1000px;
+    }
+    
+    header ul .sub-submenu {
+        position: static;
+        width: 100%;
+        right: auto;
+        top: auto;
+        margin-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: #e9e9ec;
+    }
+    
+    header ul .submenu li.active .sub-submenu {
+        max-height: 1000px;
+    }
+    
+    /* Products section adjustments */
+    .products {
+        padding: 1rem;
+    }
+    
+    .box {
+        max-width: 100%;
+        min-width: unset;
+    }
+    
+    .amalbox {
+        width: 100%;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-heading {
+        margin-bottom: 1.5rem;
+        align-items: center;
+    }
+    
+    .logofooter-1 {
+        justify-content: center;
+        margin-right: 0;
+    }
+    
+    /* Mobile menu indicators */
+    .nav_links > li.has-submenu {
+        position: relative;
+    }
+    
+    .nav_links > li.has-submenu > a {
+        display: inline-block;
+        padding-right: 30px;
+    }
+    
+    .nav_links > li.has-submenu::after {
+        content: '+';
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 20px;
+        transition: transform 0.3s;
+    }
+    
+    .nav_links > li.has-submenu.active::after {
+        content: '-';
+    }
+    
+    .submenu li a {
+        padding-left: 30px !important;
+    }
+    
+    .sub-submenu li a {
+        padding-left: 50px !important;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    nav {
+        display: block !important;
+    }
+}
