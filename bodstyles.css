@@ -512,3 +512,77 @@ header ul .sub-submenu:hover {
         display: block !important;
     }
 }
+
+/* Existing styles remain the same until the responsive breakpoints */
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1200px) {
+    .team-content .middle-boxes .box {
+        flex: 1 1 calc(50% - 40px); /* Two boxes per row on medium screens */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ... (keep your existing header/mobile menu styles) ... */
+    
+    /* Board section adjustments */
+    .team {
+        padding: 2rem 1rem; /* Reduce padding on mobile */
+    }
+    
+    .team .center h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+    
+    .team-content {
+        gap: 1.5rem; /* Reduce gap between boxes */
+    }
+    
+    /* Make all boxes full width and stack vertically */
+    .team-content .box:first-child,
+    .team-content .box:last-child,
+    .team-content .middle-boxes .box {
+        flex: 1 1 100%; /* Full width */
+        max-width: 100%; /* Full width */
+        width: 100%; /* Full width */
+        margin: 0 auto; /* Center the boxes */
+    }
+    
+    /* Adjust padding for mobile */
+    .team-content .box:first-child,
+    .team-content .box:last-child {
+        padding: 1.5rem;
+    }
+    
+    /* Show all content by default on mobile (no hover needed) */
+    .team-content .box p,
+    .team-content .middle-boxes .box p {
+        opacity: 1;
+        max-height: none;
+        margin-top: 1rem;
+    }
+    
+    /* Remove hover effects on mobile */
+    .team-content .box:hover,
+    .team-content .middle-boxes .box:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Stack middle boxes vertically */
+    .team-content .middle-boxes {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    /* ... (rest of your existing mobile styles) ... */
+}
+
+/* Optional: Add an intermediate breakpoint if needed */
+@media screen and (max-width: 900px) and (min-width: 769px) {
+    .team-content .middle-boxes .box {
+        flex: 1 1 calc(50% - 40px); /* Two boxes per row */
+        max-width: calc(50% - 40px);
+    }
+}

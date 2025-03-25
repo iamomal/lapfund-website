@@ -598,3 +598,36 @@ input:checked + label .description{
         padding-left: 50px !important;
     }
 }
+
+/* Existing styles remain the same until the info-grid section */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+    gap: 1.5rem;
+}
+
+/* Add this media query to stack the boxes on mobile */
+@media screen and (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    
+    /* Optional: Adjust spacing for stacked boxes */
+    .info-box {
+        margin-bottom: 1rem;
+    }
+    
+    /* Remove hover effects on mobile if desired */
+    .info-box:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* You can also add an intermediate breakpoint if needed */
+@media screen and (max-width: 992px) and (min-width: 769px) {
+    .info-grid {
+        gap: 1rem; /* Reduce gap on medium screens */
+    }
+}
