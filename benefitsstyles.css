@@ -223,6 +223,10 @@ header ul .sub-submenu:hover {
     margin-bottom: 1rem; /* Add spacing between elements */
 }
 
+.box li {
+    color: #000000;
+}
+
 /* Prevent the other box in the pair from elongating */
 .pair .box {
     flex: 1; /* Ensure both boxes in the pair take up equal space */
