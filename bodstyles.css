@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(120deg, orangered, rgb(13, 155, 13));
+    background: linear-gradient(120deg, #FF5A00, rgb(13, 155, 13));
 }
 
 /* Overall Page Background */
