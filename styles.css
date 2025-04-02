@@ -366,29 +366,40 @@ header ul .sub-submenu:hover {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-400px * 23)); /* Move by total width of all images */
+        /* For first carousel: 24 images (original) + 3 (duplicated) = 27 total */
+        transform: translateX(calc(-400px * 27));
     }
 }
 
-/* Pause animation on hover */
-.carousel-container:hover .carousel-track {
-    animation-play-state: paused;
+/* Add a separate animation for the second carousel */
+.carousel-section:nth-of-type(3) .carousel-track {
+    animation: scroll-second 30s linear infinite;
 }
 
-/* Responsive adjustments */
+@keyframes scroll-second {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* For second carousel: 23 images (original) + 5 (duplicated) = 28 total */
+        transform: translateX(calc(-400px * 28));
+    }
+}
+
 @media (max-width: 768px) {
-    .carousel-container {
-        height: 200px;
-    }
-    
-    .carousel-image {
-        width: 250px;
-        height: 150px;
-    }
-    
     @keyframes scroll {
         100% {
-            transform: translateX(calc(-250px * 23));
+            transform: translateX(calc(-250px * 27));
+        }
+    }
+    
+    .carousel-section:nth-of-type(3) .carousel-track {
+        animation: scroll-second-mobile 30s linear infinite;
+    }
+    
+    @keyframes scroll-second-mobile {
+        100% {
+            transform: translateX(calc(-250px * 28));
         }
     }
 }

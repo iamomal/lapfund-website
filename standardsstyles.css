@@ -256,6 +256,43 @@ header ul .sub-submenu:hover {
     transform: translateY(-5px); /* Slight lift effect */
 }
 
+/* New standalone infobox style */
+.infobox.standalone {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 2rem;
+}
+
+/* Download button style */
+.download-button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.download-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: rgb(207, 55, 0);
+    transform: translateY(-2px);
+}
+
+/* Make sure the button text is centered */
+.download-button a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
 /* Button Styling */
 .whistleblowerbutton {
     background-color: orangered;
