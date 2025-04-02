@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(120deg, #FF5A00, rgb(13, 155, 13));
+    background: rgb(243, 243, 243);
     margin: 0;
 }
 
